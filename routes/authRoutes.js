@@ -5,8 +5,6 @@ import {
 } from "../controllers/authController.js";
 import rateLimit from "express-rate-limit";
 
-const app = express();
-
 //ip limiter
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -14,9 +12,6 @@ const limiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 });
-
-// Enable trust proxy
-app.set('trust proxy', true);
 
 //router object
 const router = express.Router();
