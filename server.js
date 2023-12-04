@@ -74,4 +74,8 @@ app.use(errorMiddleware);
 const PORT = process.env.PORT || 8000;
 
 //listen
-app.listen(PORT, () => {});
+app.listen(PORT, () => {
+  console.log(
+    `Node Server Running In ${process.env.DEV_MODE} Mode on port no ${PORT}`
+  );
+});
