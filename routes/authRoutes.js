@@ -13,6 +13,9 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
+// Enable trust proxy
+app.set('trust proxy', true);
+
 //router object
 const router = express.Router();
 
